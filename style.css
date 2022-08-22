@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    ---Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+    --Softred: hsl(14, 88%, 65%);
+
+        /* #### Gradient */
+
+    --Softviolet: #af67e9;
+    --Softblue: #6565e7;
+
+        /* ### Neutral */
+
+        /* #### Text */
+
+    --Verydarkgrayishblue: hsl(237, 12%, 33%);
+    --Darkgrayishblue: hsl(240, 6%, 50%);
+
+        /* #### Dividers */
+
+    --Lightgrayishblue: hsl(240, 5%, 91%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(175,103,233);
+    background: linear-gradient(180deg, rgba(175,103,233,1) 20%, rgba(173,103,233,1) 22%, rgba(101,101,231,1) 100%);
+
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+    position: relative;
+    width: 57.5rem;
+    height: 31.9rem;
+    background-color: white;
+    background-image: url(images/illustration-woman-online-desktop.svg), url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -5.2rem 4.6rem, -36rem -18.3rem;
+    border-radius: 1.5rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+main::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    top: 13rem;
+    right: 53.8rem;
+    background-color: none;
+    background-image: url(images/illustration-box-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -2.5rem -0.1rem;
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin-top: 2.9rem;
+}
+
+ul {
+    font-size: .6rem;
+    margin-left: 27.2rem;
+    list-style: none;
+   
+}
+
+li {
+    line-height: 2.1rem;
+    border-bottom: var(--Lightgrayishblue) solid 1px;
+    width: 21.8rem;
+}
+
+h2 {
+    font-weight: 400;
+    position: relative;
+    color: var(--Darkgrayishblue);
+    letter-spacing: -0.2px;
+}
+
+.arrow {
+    position: absolute;
+    margin-left: 4rem;
+    left: 16.3rem;
+    top: 1rem;
+    transition: transform 150ms ease-in;
+}
+
+p {
+    color: var(--Darkgrayishblue);
+    font-size: .7rem;
+    line-height: 1rem;
+    margin-top: -0.9rem;
+    display: none;
+    letter-spacing: 0.4px;
+}
+
+h2:hover, h2:focus-visible {
+    cursor: pointer;
+    color: var(--Softred);
+}
+
+
+/* ---Opened tab when loaded */
+.displayed {
+    display: block;
+}
+
+.opened {
+    font-weight: bold;
+}
+
+
+
+
+::selection {
+    color: #7a7aff;
+    background-color: #dab8f5;
+}
+
+/* ######### MEDIA QUERIES ########### */ 
+
+@media (max-width: 1000px) {
+    main {
+        width: 20.4rem;
+        height: 33.5rem;
+        background-image: url(images/bg-pattern-mobile.svg);
+        background-position: 2.7rem 0rem;
+        
+    }
+
+    main::before {
+        background-image: url(images/illustration-woman-online-mobile.svg);
+        top: -6.8rem;
+        right: 2.7rem;
+        width: 15rem;
+        height: 15rem;
+        background-position: 0rem 0rem;
+    }
+
+    ul {
+        margin-left: -1rem;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 6.9rem;
+        margin-left: -1.4rem;
+    }
+
+    li {
+        width: 16.5rem;
+    }
+
+    .arrow {
+        left: 12.9rem;
+        top: 0.9rem;
+    }
+}
